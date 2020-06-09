@@ -13,11 +13,11 @@ class CreateTodosTable extends Migration
      */
     public function up()
     {
-        Schema::create('todo', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->dateTime('due_date');
-            $table->boolean('done');
+            $table->dateTime('due_date')->nullable();
+            $table->boolean('done')->default(0);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTodosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todo');
+        Schema::dropIfExists('todos');
     }
 }

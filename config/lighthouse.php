@@ -100,7 +100,7 @@ return [
     */
 
     'namespaces' => [
-        'models' => ['App', 'App\\Models'],
+        'models' => ['App'],
         'queries' => 'App\\GraphQL\\Queries',
         'mutations' => 'App\\GraphQL\\Mutations',
         'subscriptions' => 'App\\GraphQL\\Subscriptions',

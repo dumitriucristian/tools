@@ -14,19 +14,19 @@ class TodoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('todo')->insert([
+        DB::table('todos')->insert([
             'title' => "Do  something else",
             'due_date' => Carbon::now()->format('Y-m-d H:i:s'),
             'done' => 1
         ]);
 
-        DB::table('todo')->insert([
+        DB::table('todos')->insert([
             'title' => "Do something",
             'due_date' => Carbon::now()->format('Y-m-d H:i:s'),
             'done' => 0
         ]);
 
-        DB::table('todo')->insert([
+        DB::table('todos')->insert([
             'title' => "Do nothing",
             'due_date' => Carbon::now()->format('Y-m-d H:i:s'),
             'done' => 0
